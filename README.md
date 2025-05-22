@@ -1,3 +1,5 @@
+**Saya Muhammad Akhtar Rizki Ramadha dengan NIM 2304742 mengerjakan soal Tugas Praktikum 9 dalam mata kuliah Desain dan Pemrograman Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.**
+
 # Restaurant Management System
 
 Sistem manajemen restoran berbasis PHP dengan arsitektur MVVM (Model-View-ViewModel) yang memungkinkan pengelolaan menu, pesanan, dan item pesanan secara efisien.
@@ -59,61 +61,6 @@ Sistem ini menggunakan arsitektur **MVVM (Model-View-ViewModel)**:
 - subtotal (DECIMAL(10,2), NOT NULL)
 - created_at (TIMESTAMP, DEFAULT CURRENT_TIMESTAMP)
 ```
-
-## 🚀 Instalasi
-
-### Prasyarat
-- PHP 7.4+
-- MySQL 5.7+
-- Web server (Apache/Nginx)
-- PDO MySQL extension
-
-### Langkah Instalasi
-
-1. **Clone atau download project**
-   ```bash
-   git clone <repository-url>
-   cd restaurant-management
-   ```
-
-2. **Import database**
-   ```bash
-   mysql -u username -p < database.sql
-   ```
-
-3. **Konfigurasi koneksi database**
-   Buat file `config/database.php`:
-   ```php
-   <?php
-   $host = 'localhost';
-   $dbname = 'restaurant_management';
-   $username = 'your_username';
-   $password = 'your_password';
-
-   try {
-       $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-       $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-   } catch(PDOException $e) {
-       die("Connection failed: " . $e->getMessage());
-   }
-   ?>
-   ```
-
-4. **Buat file helper functions**
-   Buat file `helpers/functions.php`:
-   ```php
-   <?php
-   function sanitize($data) {
-       return htmlspecialchars(strip_tags(trim($data)));
-   }
-   ?>
-   ```
-
-5. **Setup web server**
-   Arahkan document root ke folder project atau gunakan PHP built-in server:
-   ```bash
-   php -S localhost:8000
-   ```
 
 ## 💻 Penggunaan
 
